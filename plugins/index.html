@@ -8,8 +8,8 @@
     <link rel="icon" href="/xianyu-robot-doc/favicon.ico">
     <meta name="description" content="一个自用的Bot框架">
     
-    <link rel="preload" href="/xianyu-robot-doc/assets/css/0.styles.b310275b.css" as="style"><link rel="preload" href="/xianyu-robot-doc/assets/js/app.c2d3c7c0.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/2.73520572.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/12.cb915054.js" as="script"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/10.f112548b.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/11.85bdb5c8.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/3.413a1f2e.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/4.75c9048d.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/5.f636e753.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/6.869622ce.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/7.c1979a50.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/8.a42664e5.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/9.5a42eba5.js">
-    <link rel="stylesheet" href="/xianyu-robot-doc/assets/css/0.styles.b310275b.css">
+    <link rel="preload" href="/xianyu-robot-doc/assets/css/0.styles.6dbbedb2.css" as="style"><link rel="preload" href="/xianyu-robot-doc/assets/js/app.da6de0fe.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/2.73520572.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/12.587f9f9b.js" as="script"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/10.f112548b.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/11.420fad1e.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/3.413a1f2e.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/4.75c9048d.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/5.f636e753.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/6.869622ce.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/7.c1979a50.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/8.2482ee2f.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/9.5a42eba5.js">
+    <link rel="stylesheet" href="/xianyu-robot-doc/assets/css/0.styles.6dbbedb2.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/xianyu-robot-doc/" class="home-link router-link-active"><!----> <span class="site-name">咸鱼Bot</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/xianyu-robot-doc/guide/" class="nav-link">
@@ -25,7 +25,7 @@
         bot<span class="token punctuation">.</span>Api<span class="token punctuation">.</span><span class="token function">sendGroupMsg</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>group_id<span class="token punctuation">,</span> e<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre></div><p>也可以编写为插件，更方便管理与拓展。</p> <div class="custom-block tip"><p class="custom-block-title">注意</p> <p>插件需要<strong>继承</strong>插件类<code>BotPlugin</code>，切调用<code>super</code>传递<strong>插件名</strong>和固定参数<code>bot</code></p> <p>插件有以下属性：</p> <ul><li><strong>name</strong>：插件名</li> <li><strong>Bot</strong>：Bot对象</li> <li><strong>Command</strong>：插件命令</li> <li><strong>init</strong>：初始化方法，会在Bot连接完成后调用</li> <li><strong>debug</strong>：debug方法</li></ul></div> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Fudu</span> <span class="token keyword">extends</span> <span class="token class-name">BotPlugin</span> <span class="token punctuation">{</span>
+</code></pre></div><p>也可以编写为类插件，更方便管理与拓展。</p> <div class="custom-block tip"><p class="custom-block-title">注意</p> <p>插件需要<strong>继承</strong>插件类<code>BotPlugin</code>，请使用<code>super</code>传递<strong>插件名</strong>和固定参数<code>bot</code></p> <p>插件有以下属性：</p> <ul><li><strong>name</strong>：插件名</li> <li><strong>Bot</strong>：Bot对象</li> <li><strong>Command</strong>：插件命令</li> <li><strong>init</strong>：初始化方法，会在Bot连接后调用</li> <li><strong>debug</strong>：debug方法</li> <li><strong>config</strong>: 插件配置</li></ul></div> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Fudu</span> <span class="token keyword">extends</span> <span class="token class-name">BotPlugin</span> <span class="token punctuation">{</span>
   <span class="token keyword">constructor</span><span class="token punctuation">(</span>bot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token string">'复读'</span><span class="token punctuation">,</span> bot<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
@@ -38,7 +38,47 @@
 <span class="token punctuation">}</span>
 
 app<span class="token punctuation">.</span><span class="token function">plugin</span><span class="token punctuation">(</span>Fudu<span class="token punctuation">)</span>
-</code></pre></div><p>插件类可通过<code>this.Bot</code>调用框架的各种功能。</p> <p><code>Bot</code>拥有以下属性：</p> <ul><li><strong>Data</strong>：Bot的设置和缓存</li> <li><strong>Log</strong>: 日志输出方法</li> <li><a href="/cqcode"><strong>CQCode</strong></a>：CQ码</li> <li><strong>Plugin</strong>：插件类</li> <li><strong>Command</strong>：命令类</li> <li><strong>Admin</strong>：管理员类</li> <li><strong>Conn</strong>：WS链接，不推荐直接使用</li> <li><strong>Api</strong>：HTTP API</li> <li><a href="/event"><strong>Event</strong></a>：消息事件</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/22/2021, 11:13:36 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p><strong>类插件也可使用指令方式编写功能：</strong></p> <p>插件内有两种方法设置指令</p> <ul><li>使用<code>this.Bot.Command.command</code></li> <li>使用<code>this.Command.command</code></li></ul> <p>功能基本一致，但是后者可以统一的设置<strong>黑/白名单</strong>和多一些管理方法，同时<code>gorup</code>会固定为插件的<code>name</code></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Command</span> <span class="token keyword">extends</span> <span class="token class-name">BotPlugin</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span>bot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token string">'指令'</span><span class="token punctuation">,</span> bot<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function-variable function">init</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>Bot<span class="token punctuation">.</span>Command
+      <span class="token comment">// 指令名称</span>
+      <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'指令1'</span><span class="token punctuation">)</span>
+      <span class="token comment">// 指令别名，可设置多个</span>
+      <span class="token punctuation">.</span><span class="token function">alias</span><span class="token punctuation">(</span><span class="token string">'Command1'</span><span class="token punctuation">)</span>
+      <span class="token comment">// 使用正则匹配方式，使用后指令名称和指令别名将会失效</span>
+      <span class="token punctuation">.</span><span class="token function">reg</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">指令</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span>
+      <span class="token comment">// 指令描述</span>
+      <span class="token punctuation">.</span><span class="token function">desc</span><span class="token punctuation">(</span><span class="token string">'测试指令1'</span><span class="token punctuation">)</span>
+      <span class="token comment">// 指令分组</span>
+      <span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token string">'测试'</span><span class="token punctuation">)</span>
+      <span class="token comment">// 设置白名单</span>
+      <span class="token punctuation">.</span><span class="token function">white</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">123456</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+       <span class="token comment">// 设置黑名单，黑名单和白名单不能同时使用，后调用的将会失效</span>
+       <span class="token comment">// 与Bot的黑白名单不同，指令的黑白名单会同时对Q号和群号生效</span>
+      <span class="token punctuation">.</span><span class="token function">black</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">123456</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+      <span class="token comment">// 设置触发方法，可设置多个</span>
+      <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token string">'group'</span><span class="token punctuation">,</span> e <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 群指令</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token string">'private'</span><span class="token punctuation">,</span> e <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 私聊指令</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// 设置插件统一白名单</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>Command<span class="token punctuation">.</span><span class="token function">white</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">123456</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">this</span><span class="token punctuation">.</span>Command
+      <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'指令1'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token string">'group'</span><span class="token punctuation">,</span> e <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+app<span class="token punctuation">.</span><span class="token function">plugin</span><span class="token punctuation">(</span>Command<span class="token punctuation">)</span>
+</code></pre></div><p>插件类可通过<code>this.Bot</code>调用框架的各种功能。</p> <p><code>Bot</code>拥有以下属性：</p> <ul><li><strong>Data</strong>：Bot的设置和缓存</li> <li><strong>Log</strong>: 日志输出方法</li> <li><a href="/cqcode"><strong>CQCode</strong></a>：CQ码</li> <li><strong>Plugin</strong>：插件类</li> <li><strong>Command</strong>：命令类</li> <li><strong>Admin</strong>：管理员类</li> <li><strong>Conn</strong>：WS链接，不推荐直接使用</li> <li><strong>Api</strong>：HTTP API</li> <li><a href="/event"><strong>Event</strong></a>：消息事件</li> <li><strong>Debug</strong>: Debug类</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/5/2021, 12:40:19 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/xianyu-robot-doc/guide/" class="prev">
         指南
@@ -47,6 +87,6 @@ app<span class="token punctuation">.</span><span class="token function">plugin</
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/xianyu-robot-doc/assets/js/app.c2d3c7c0.js" defer></script><script src="/xianyu-robot-doc/assets/js/2.73520572.js" defer></script><script src="/xianyu-robot-doc/assets/js/12.cb915054.js" defer></script>
+    <script src="/xianyu-robot-doc/assets/js/app.da6de0fe.js" defer></script><script src="/xianyu-robot-doc/assets/js/2.73520572.js" defer></script><script src="/xianyu-robot-doc/assets/js/12.587f9f9b.js" defer></script>
   </body>
 </html>

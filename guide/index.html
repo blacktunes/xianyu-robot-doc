@@ -8,8 +8,8 @@
     <link rel="icon" href="/xianyu-robot-doc/favicon.ico">
     <meta name="description" content="一个自用的Bot框架">
     
-    <link rel="preload" href="/xianyu-robot-doc/assets/css/0.styles.b310275b.css" as="style"><link rel="preload" href="/xianyu-robot-doc/assets/js/app.c2d3c7c0.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/2.73520572.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/11.85bdb5c8.js" as="script"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/10.f112548b.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/12.cb915054.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/3.413a1f2e.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/4.75c9048d.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/5.f636e753.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/6.869622ce.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/7.c1979a50.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/8.a42664e5.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/9.5a42eba5.js">
-    <link rel="stylesheet" href="/xianyu-robot-doc/assets/css/0.styles.b310275b.css">
+    <link rel="preload" href="/xianyu-robot-doc/assets/css/0.styles.6dbbedb2.css" as="style"><link rel="preload" href="/xianyu-robot-doc/assets/js/app.da6de0fe.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/2.73520572.js" as="script"><link rel="preload" href="/xianyu-robot-doc/assets/js/11.420fad1e.js" as="script"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/10.f112548b.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/12.587f9f9b.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/3.413a1f2e.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/4.75c9048d.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/5.f636e753.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/6.869622ce.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/7.c1979a50.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/8.2482ee2f.js"><link rel="prefetch" href="/xianyu-robot-doc/assets/js/9.5a42eba5.js">
+    <link rel="stylesheet" href="/xianyu-robot-doc/assets/css/0.styles.6dbbedb2.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/xianyu-robot-doc/" class="home-link router-link-active"><!----> <span class="site-name">咸鱼Bot</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/xianyu-robot-doc/guide/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
@@ -45,7 +45,7 @@ app<span class="token punctuation">.</span><span class="token function">start</s
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><h3 id="启动bot"><a href="#启动bot" class="header-anchor">#</a> 启动Bot</h3> <p>启动方法，请在最后调用
-该方法有4个参数，均为可选属性，分别为：</p> <ul><li>WS设置</li> <li>是否开启debug（若为<code>true</code>则所有API方法将不会真正调用）</li> <li>是否显示事件日志（若为<code>false</code>则不会显示事件日志）
+该方法有3个参数，均为可选属性，分别为：</p> <ul><li>WS设置</li> <li>是否开启debug（若为<code>true</code>则所有API方法将不会真正调用）</li> <li>是否显示事件日志（若为<code>false</code>则不会显示事件日志）
 以下为默认属性</li></ul> <div class="language-ts extra-class"><pre class="language-ts"><code>app<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   wss<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 是否使用wss</span>
   accessToken<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// API的访问token</span>
@@ -60,11 +60,11 @@ app<span class="token punctuation">.</span><span class="token function">start</s
   <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>bot <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Bot已启动'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
-</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/22/2021, 11:13:36 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/xianyu-robot-doc/plugins/">
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/5/2021, 12:40:19 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/xianyu-robot-doc/plugins/">
         插件
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/xianyu-robot-doc/assets/js/app.c2d3c7c0.js" defer></script><script src="/xianyu-robot-doc/assets/js/2.73520572.js" defer></script><script src="/xianyu-robot-doc/assets/js/11.85bdb5c8.js" defer></script>
+    <script src="/xianyu-robot-doc/assets/js/app.da6de0fe.js" defer></script><script src="/xianyu-robot-doc/assets/js/2.73520572.js" defer></script><script src="/xianyu-robot-doc/assets/js/11.420fad1e.js" defer></script>
   </body>
 </html>
