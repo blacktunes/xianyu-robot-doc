@@ -189,7 +189,7 @@ in: [Bot/modules/Api.ts:603](https://github.com/blacktunes/xianyu-robot/blob/ba6
 
 ___
 
-### 获取群成员列表
+## 获取群成员列表
 
 ▸ **getGroupMemberList**(`group_id`: *number*): *Promise*<*MemberInfo*[]\>
 
