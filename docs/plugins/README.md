@@ -13,21 +13,20 @@ app.plugin(bot => {
 
 也可以编写为类插件，更方便管理与拓展。
 ::: tip 注意
-插件需要**继承**插件类`BotPlugin`，请使用`super`传递**插件名**和固定参数`bot`
+插件需要**继承**插件类`BotPlugin`
+推荐添加`name`属性以便于查找插件
 
 插件有以下属性：
-- **name**：插件名
+- **name**：插件名(只读)
+- **config**: 插件设置
 - **Bot**：Bot对象
 - **Command**：插件命令
 - **init**：初始化方法，会在Bot连接后调用
-- **debug**：debug方法
 - **config**: 插件配置
 :::
 ```ts
 class Fudu extends BotPlugin {
-  constructor(bot) {
-    super('复读', bot)
-  }
+  name = '复读'
 
   init = () => {
     this.Bot.Event.on('message.group', e => {
