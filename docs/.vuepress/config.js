@@ -6,18 +6,37 @@ module.exports = {
   ],
   base: '/xianyu-robot-doc/',
   themeConfig: {
+    smoothScroll: true,
+    lastUpdated: '上一次编辑',
+    docsDir: 'docs',
+    docsBranch: 'master',
+    repo: 'blacktunes/xianyu-robot',
+    repoLabel: 'GitHub',
+    docsRepo: 'xianyu-robot-doc',
+    editLinks: true,
+    editLinkText: '编辑此页',
+    displayAllHeaders: false,
     sidebarDepth: 2,
-    lastUpdated: 'Last Updated',
+    activeHeaderLinks: true,
     nav: [
-      { text: '指南', link: '/guide/' },
-      { text: 'GitHub', link: 'https://github.com/blacktunes/xianyu-robot' }
+      { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Bot', link: '/bot/' },
+      { text: 'Plugins', link: 'https://github.com/blacktunes/xianyu-robot-plugins' }
     ],
-    sidebar: [
-      ['/guide/', '指南'],
-      ['/plugins/', '插件'],
-      ['/cqcode/', 'CQ码'],
-      ['/api/', 'Api'],
-      ['/event/', 'Event']
-    ]
+    sidebar: {
+      '/guide/': [
+        '',
+        'plugin'
+      ],
+      '/bot/': [
+        '',
+        'data',
+        'cqcode',
+        'api',
+        'event',
+        'debug'
+      ]
+    }
   }
 }

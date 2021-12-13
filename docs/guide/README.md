@@ -80,6 +80,7 @@ app.plugin(bot => {
 - WS设置
 - 是否开启debug（若为`true`则所有API方法将不会真正调用）
 - 是否显示事件日志（若为`false`则不会显示事件日志）
+
 以下为默认属性
 ```ts
 app.start({
